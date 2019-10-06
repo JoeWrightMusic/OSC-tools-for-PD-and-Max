@@ -1,0 +1,24 @@
+#N canvas 358 156 523 355 12;
+#X text 10 4;
+#X obj 34 50 OSCin 1 4444 1;
+#X obj 34 24 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X floatatom 130 22 5 0 0 0 - - -;
+#X obj 227 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 247 21 < these arent needed \, but can be used;
+#X obj 34 242 spigot;
+#X obj 73 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 34 296 print;
+#X obj 34 269 list prepend fromOSCin;
+#X text 90 241 < Dont need to print the messages again \, but this
+is where;
+#X text 314 260 you'd get the OSC messages;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 2;
+#X connect 6 0 9 0;
+#X connect 7 0 6 1;
+#X connect 9 0 8 0;
